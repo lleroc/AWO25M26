@@ -1,0 +1,28 @@
+  
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .calculadora {
+            width: 300px;
+            margin: 60px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        .resultado {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+    

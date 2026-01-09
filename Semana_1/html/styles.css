@@ -1,0 +1,33 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: #333;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+.menu ul li{
+    position: relative;
+}
+.menu ul li a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu ul li a:hover{
+    background-color: #555;
+}
+
+hr {
+    background-color: #283593;
+}
+div{
+    margin: 20px 40px 15px 45px;
+}
