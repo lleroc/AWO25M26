@@ -1,6 +1,5 @@
 function init(){
     $('#countryForm').on('submit', (e)=>{
-        
         guardar(e);
     });
 }
