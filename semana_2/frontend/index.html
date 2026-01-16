@@ -52,6 +52,9 @@
             <button id="newBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countryModal">
               + Nuevo país
             </button>
+
+            <a href="index2.html?nombre=Luis&edad=37" 
+            class="btn btn-outline-secondary">Enviar valores por GET (url)</a>
           </div>
         </div>
         <hr class="mt-3">
@@ -108,25 +111,26 @@
   </div>
 
   <!-- Modal Crear/Editar -->
-  <div class="modal fade" id="countryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" data-bs-backdrop="static" id="countryModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-      <form id="countryForm" class="modal-content">
+      <form id="countryForm" method="post" class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="countryModalTitle">Nuevo país</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          <button type="button" onclick="limpiar()" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
 
         <div class="modal-body">
+          <input type="text" hidden id="paisid" name="paisid">
           <div class="mb-3">
-            <label for="codigoInput" class="form-label">Código (2 letras)</label>
-            <input id="codigoInput" name="Codigo" type="text" class="form-control"
+            <label for="Codigo" class="form-label">Código (2 letras)</label>
+            <input id="Codigo" name="Codigo" type="text" class="form-control"
                    maxlength="2" placeholder="EC" required>
             <div class="form-text">Se guarda en <code>varchar(2)</code>. Ideal en mayúsculas.</div>
           </div>
 
           <div class="mb-3">
-            <label for="paisInput" class="form-label">País</label>
-            <input id="paisInput" name="Pais" type="text" class="form-control"
+            <label for="Pais" class="form-label">País</label>
+            <input id="Pais" name="Pais" type="text" class="form-control"
                    maxlength="100" placeholder="Ecuador" required>
           </div>
 
@@ -134,7 +138,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" onclick="limpiar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button id="saveBtn" type="submit" class="btn btn-primary">Guardar</button>
         </div>
       </form>
@@ -173,6 +177,8 @@
      <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
      <script src="home.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  
 </body>
 </html>

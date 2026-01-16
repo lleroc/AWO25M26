@@ -57,7 +57,7 @@ class Pais
         if (mysqli_query($con, $cadena)) {
             // No hay autoincrement, devolvemos el mismo Código insertado
             $con->close();
-            return $Codigo;
+            return 'ok';
         } else {
             $con->close();
             return 'error';
@@ -76,7 +76,7 @@ class Pais
         $datos = mysqli_query($con, $cadena);
 
         $con->close();
-        return $datos;
+        return 'ok';
     }
 
     public function eliminar($Codigo)
@@ -90,6 +90,6 @@ class Pais
         $datos = mysqli_query($con, $cadena);
 
         $con->close();
-        return $datos;
+        return 'ok';
     }
 }
